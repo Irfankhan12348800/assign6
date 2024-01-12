@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('nav a');
+  
+      navLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+              e.preventDefault();
+  
+              const targetId = this.getAttribute('href').substring(1);
+              const targetSection = document.getElementById(targetId);
+  
+              window.scrollTo({
+                  top: targetSection.offsetTop+200,
+                  behavior: 'smooth'
+              });
+          });
+      });
+  });
+  </script>
+
+
+
+</head>
+<body>
+
+
+
+<header class="text-gray-400 bg-gray-900 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <img src="logo.png" height="40" width="40" alt="">
+      <span class="ml-3 text-xl">DAILY AI BLOGS </span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a class="mr-5 hover:text-white"  href="#home" >Home</a>
+          <a class="mr-5 hover:text-white"  href="#news" >News</a>
+      <a class="mr-5 hover:text-white" href="#points" >Points</a>
+      <a class="mr-5 hover:text-white" href="#contact" >Contact Us </a>
+    </nav>
+    <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+<section id="home" class="text-gray-400 bg-gray-900 body-font">
+  <h1  class="intro" width="100" height="40" id="1" > INTRODUCTION TO AI </h1  > 
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="data:image/jpeg;base64,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 ">
+    <div class="text-center lg:w-2/3 w-full">
+     <b>  <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Impact Of Artifical Artificial-Intelligence In Daily Life</h1></b>
+      <p class="leading-relaxed mb-8">
+        Artificial Intelligence (AI) has profoundly reshaped our daily lives, revolutionizing various aspects. From automated personal assistants simplifying tasks to smart devices enhancing our homes, AI contributes to increased efficiency and convenience. In healthcare, AI aids in early disease detection and personalized treatment plans. Educational tools leverage AI for adaptive learning experiences, while communication benefits from language translation services and chatbots.</p>
+      <div class="flex justify-center">
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<img src="1.png " alt="network error" align="text-center">
+<section id="points" class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex flex-wrap w-full">
+      <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+        <div class="flex relative pb-12">
+          <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow pl-4">
+            <b> <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Breakthroughs in Natural Language Processing (NLP):</b>
+
+            </h2>
+            <p class="leading-relaxed">Recent advancements in NLP, driven by powerful AI models like GPT-4, are empowering developers to create more sophisticated language-related applications. From improved chatbots to advanced content generation, these breakthroughs signal a new era in human-computer interactions.
+            </p>
+          </div>
+        </div>
+        <div class="flex relative pb-12">
+          <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <div class="flex-grow pl-4">
+            <b>  <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Hardware Innovations Accelerating AI Development:</h2></b>
+            <p class="leading-relaxed">Cutting-edge hardware developments, such as the emergence of neuromorphic computing and powerful AI accelerators, are providing developers with enhanced capabilities. </p>
+          </div>
+        </div>
+        <div class="flex relative pb-12">
+          <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <circle cx="12" cy="5" r="3"></circle>
+              <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+            </svg>
+          </div>
+          <div class="flex-grow pl-4">
+           <b> <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Ethical AI <br> Addressing Bias and Responsible Development:</h2></b>
+            <p class="leading-relaxed">The AI community is placing a heightened emphasis on ethical considerations. Developers are increasingly focusing on mitigating bias in AI algorithms and adopting responsible development practices. </p>
+          </div>
+        </div>
+        <div class="flex relative pb-12">
+          <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="flex-grow pl-4">
+            <b> <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">AI in Edge Computing for Real-time Applications:</h2></b>
+            <p class="leading-relaxed">The integration of AI into edge computing environments is gaining momentum, allowing developers to deploy AI models directly on devices. This development opens up opportunities for real-time applications across various domains, from smart devices and IoT to robotics, offering faster response times and improved user experiences.</p>
+          </div>
+        </div>
+        <div class="flex relative">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+          </div>
+          <div class="flex-grow pl-4">
+           <b>   <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Streamlining Development and Deployment Processes:</h2></b>
+            <p class="leading-relaxed">AI-driven DevOps practices are becoming increasingly prevalent, transforming how developers manage the software development lifecycle. Automation, predictive analytics, and intelligent testing are enhancing efficiency, reducing errors, and accelerating the deployment of AI applications. </p>
+          </div>
+        </div>
+      </div>
+      <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="https://lablab.ai/_next/image?url=https%3A%2F%2Fimagedelivery.net%2FK11gkZF3xaVyYzFESMdWIQ%2F3dacc56c-05b6-4505-7904-22c53fc21600%2Foriginal&w=3840&q=80" alt="step">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="news" class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">AI LATEST NEWS</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">This innovative application of AI not only enhances the efficiency of conservation efforts but also provides a powerful tool to address the challenges posed by climate change and habitat loss. By leveraging technology to safeguard our planet's diverse ecosystems, AI is playing a crucial role in fostering a harmonious coexistence between humanity and the natural world.</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://www.ibm.com/blog/wp-content/uploads/2023/09/dsc02281-edit-edit-5-edit.blog-lead-space-40x21-1.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-white">Artifical Intelligence</h2>
+            <h3 class="text-gray-500 mb-3"></h3>
+            <p class="mb-4"></p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://i.ytimg.com/vi/vufqgaD_7Ow/maxresdefault.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-white">What Job AI TAKE?</h2>
+            <h3 class="text-gray-500 mb-3"></h3>
+            <p class="mb-4"></p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="data:image/jpeg;base64,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">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-white">Technology Reporter</h2>
+            <h3 class="text-gray-500 mb-3"> </h3>
+            <p class="mb-4"> </p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://ars.els-cdn.com/content/image/1-s2.0-S2666675821001041-fx1.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-white">AI Chain </h2>
+            <h3 class="text-gray-500 mb-3"></h3>
+            <p class="mb-4"></p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://media.licdn.com/dms/image/D5612AQHP0GE3IEJF6g/article-cover_image-shrink_720_1280/0/1689686238537?e=2147483647&v=beta&t=ilhhb-GvgebgtTPI3EjNdpv-RPs1Tla10wEP3jAGOdM">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">AI Development Company</h2>
+          <p class="mt-1"></p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://media.cbs8.com/assets/CCT/images/cbda1ab7-ef79-4998-a954-742712c0c34a/cbda1ab7-ef79-4998-a954-742712c0c34a_1920x1080.jpg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">AI In Our Lives </h2>
+          <p class="mt-1"></p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://customerthink.com/wp-content/uploads/Artificial-Intelligence-and-the-Internet-of-Things-AIoT-hold-the-promise-of-a-more-connected-future-700x341.jpg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">Connected Future</h2>
+          <p class="mt-1"></p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://www.shutterstock.com/image-illustration/bratislava-slovakia-04012023-tag-cloud-260nw-2283057979.jpg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">AI chatGPT </h2>
+          <p class="mt-1"> </p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://www.theenterprisemind.com.ng/wp-content/uploads/2023/11/Edit-Your-Videos-with-Ease-Using-AI-Video-Editing-Tool-%E2%80%93-Invideo-2.jpg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">AI Video Editing Tool</h2>
+          <p class="mt-1"></p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.prismic.io/intuzwebsite/e2e7d674-1bad-4c15-b02d-c399f98c201f_A+Comprehensive+Guide+to+Building+an+AI+Chatbot%402x.png?auto=compress,format">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">Building On AI Chatbot</h2>
+          <p class="mt-1"> </p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://arynews.tv/wp-content/uploads/2022/12/ChatGPT-696x342.jpg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">AI Best Services </h2>
+          <p class="mt-1"> </p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://cxotoday.com/wp-content/uploads/2023/12/GenAI-4-2.jpg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-white title-font text-lg font-medium">What About Copyright</h2>
+          <p class="mt-1"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="contact" class="text-gray-400 bg-gray-900 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Contact Us</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">give your feedback about this AI blog website .</p>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+            <input type="text" id="name" name="name" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <div class="relative">
+            <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
+            <textarea id="message" name="message" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <button class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
+        </div>
+        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+          <a class="text-green-400">irfankhan12348800@email.com</a>
+          <p class="leading-normal my-5">Muhammad Irfan
+            <br>
+          </p>
+          <span class="inline-flex">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
